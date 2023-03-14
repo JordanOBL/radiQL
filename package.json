@@ -2,7 +2,7 @@
     "name": "empty-project",
     "version": "1.0.0",
     "engines": {
-        "node": "16.x",
+        "node": "18.7.0",
         "npm": "9.6.1"
     },
     "description": "",
