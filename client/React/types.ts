@@ -1,11 +1,10 @@
-
-//uris type 
+// uris type
 export type Uris = {
-  uri_name: string;
-  user_id: string
-  }; 
+    uri_name: string;
+    user_id: string;
+};
 
-//Response types
+// Response types
 export type usersUris = {
-  data: Uris[];
+    data: Uris[];
 };

@@ -78,6 +78,7 @@ function MainPage({ username }) {
   };
 
   // Get URIS Function: Axios request to server  route '/uris'
+  // eslint-disable-next-line consistent-return
   const GetUsersUris = async (): Promise<void | string> => {
     try {
       // Post body includes current users ID from cookie.SSID
@@ -128,13 +129,12 @@ function MainPage({ username }) {
         </div>
         <section id="instructions">
           <h2 className={instruction === 1 ? '' : 'gray'}>
-            1. Paste your URI below and click "Convert!"
+            1. Paste your URI below and click &quot;Convert!&quot;
           </h2>
           <h2 className={instruction === 2 ? '' : 'gray'}>
-            2. Click "
+            2. Click &quot;
             <FaClipboardList style={{ display: 'inline-block' }} />
-            "
-            in the output code block to copy the current page
+            &quot; in the output code block to copy the current page
           </h2>
           <h2 className={instruction === 3 ? '' : 'gray'}>
             3. Paste code into your server to begin using GraphQL
@@ -166,7 +166,7 @@ function MainPage({ username }) {
               Save Database
             </motion.button>
           ) : (
-            <button id="disabled-save" disabled>
+            <button type="button" id="disabled-save" disabled>
               Log In To Save Database
             </button>
           )}

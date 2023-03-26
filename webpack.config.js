@@ -18,15 +18,42 @@ const config = {
       directory: path.join(__dirname, 'dist'),
     },
     proxy: {
-      '/submitURI': 'http://localhost:3000',
-      '/saveURI': 'http://localhost:3000',
-      '/register': 'http://localhost:3000',
-      '/login': 'http://localhost:3000',
-      '/uris': 'http://localhost:3000',
-      '/getUsername': 'http://localhost:3000',
-      '/logout': 'http://localhost:3000',
-      '/defaultbp': 'http://localhost:3000',
-      '/apollobp': 'http://localhost:3000',
+      '/submitURI':
+                process.env.NODE_ENV === 'production'
+                  ? 'https://radiql.herokuapp.com'
+                  : 'http://localhost:3000',
+      '/saveURI':
+                process.env.NODE_ENV === 'production'
+                  ? 'https://radiql.herokuapp.com'
+                  : 'http://localhost:3000',
+      '/register':
+                process.env.NODE_ENV === 'production'
+                  ? 'https://radiql.herokuapp.com'
+                  : 'http://localhost:3000',
+      '/login':
+                process.env.NODE_ENV === 'production'
+                  ? 'https://radiql.herokuapp.com'
+                  : 'http://localhost:3000',
+      '/uris':
+                process.env.NODE_ENV === 'production'
+                  ? 'https://radiql.herokuapp.com'
+                  : 'http://localhost:3000',
+      '/getUsername':
+                process.env.NODE_ENV === 'production'
+                  ? 'https://radiql.herokuapp.com'
+                  : 'http://localhost:3000',
+      '/logout':
+                process.env.NODE_ENV === 'production'
+                  ? 'https://radiql.herokuapp.com'
+                  : 'http://localhost:3000',
+      '/defaultbp':
+                process.env.NODE_ENV === 'production'
+                  ? 'https://radiql.herokuapp.com'
+                  : 'http://localhost:3000',
+      '/apollobp':
+                process.env.NODE_ENV === 'production'
+                  ? 'https://radiql.herokuapp.com'
+                  : 'http://localhost:3000',
     },
   },
   module: {
