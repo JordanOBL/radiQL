@@ -1,12 +1,15 @@
-import express, { Request, Response, NextFunction } from 'express';
-import path from 'path';
+import express, { NextFunction, Request, Response } from 'express';
+
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
+import path from 'path';
+// eslint-disable-next-line import/extensions
 import router from './router';
 
 dotenv.config();
 const port = process.env.PORT || 3000;
+// eslint-disable-next-line import/prefer-default-export
 export const app = express();
 
 app.use(bodyParser.json());
